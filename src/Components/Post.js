@@ -1,4 +1,5 @@
 import './Post.css'
+import { Link } from 'react-router-dom';
 
 export default function Post(props){
   return(
@@ -16,16 +17,16 @@ export default function Post(props){
             </svg>    
           </div>
         </div>
-        <div className='bg-white m-2 p-3 rounded-xl basis-5/6'>
+        <div className='contenedor basis-5/6'>
           <ul>
             <li>
               <div className=''>
-                {props.data}
+                {props.data.usuario}
               </div>
             </li>
             <li>
               <div className='font-bold py-1 text-lg'>
-                TITULO
+                <Link to={`/DetallePost/${props.data.id}`}>{props.data.titulo}</Link>
               </div>
             </li>
             <li className='flex font-normal text-white space-x-1 text-sm'>
