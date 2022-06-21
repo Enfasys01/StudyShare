@@ -5,16 +5,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import DetallePost from './routes/DetallePost';
-import PostInfo from './routes/PostInfo';
+import Navbar from './Components/Navbar';
+import PostInfo from './Components/PostInfo';
+import Ingresar from './routes/Ingresar';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <React.StrictMode>
+    <Navbar></Navbar>
+    <div className='sol'></div>
     <Routes>
       <Route path='/' element={<App></App>}></Route>
       <Route path='DetallePost' element={<DetallePost/>}>
         <Route path=':postId' element={<PostInfo/>}></Route>
       </Route>
+      <Route path='Ingresar' element={<Ingresar/>}></Route>
     </Routes>
   </React.StrictMode>
   </BrowserRouter>

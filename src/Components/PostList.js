@@ -5,7 +5,7 @@ import { getPosts } from '../datos.js';
 export default function PostList(){
   let data= getPosts();
     return(
-      <div class='lista-posts'>
+      <div class='lista'>
         {data.map(e=>{
           return(<Post data={e}/>);
         })}

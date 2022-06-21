@@ -1,0 +1,15 @@
+.votos{
+  max-width: 60px;
+  height: 100px;
+}
+
+.voto{
+  display: block;
+  margin: auto;
+  
+}
+
+.votos>div>svg:hover {
+  --tw-text-opacity: 1;
+  color: rgb(91 33 182 / var(--tw-text-opacity));
+}

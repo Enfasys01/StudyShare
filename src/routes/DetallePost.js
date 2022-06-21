@@ -1,4 +1,5 @@
-import PostInfo from "./PostInfo";
+import PostInfo from "../Components/PostInfo";
+
 
 export default function DetallePost(){
 

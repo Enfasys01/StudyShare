@@ -1,0 +1,11 @@
+.fondo{
+  position: fixed;
+  top: -400px;
+  left: -300px;
+  z-index: -1;
+  background-color: rgb(170, 104, 255);
+  width: 150vw;
+  height: 100vh;
+  transform: rotate(-15deg);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -20px 36px -28px inset;
+}
