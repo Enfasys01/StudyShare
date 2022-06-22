@@ -8,6 +8,8 @@ import DetallePost from './routes/DetallePost';
 import Navbar from './Components/Navbar';
 import PostInfo from './Components/PostInfo';
 import Ingresar from './routes/Ingresar';
+import IniciarSesion from './Components/IniciarSesion';
+import CrearCuenta from './Components/CrearCuenta';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
@@ -19,7 +21,10 @@ root.render(
       <Route path='DetallePost' element={<DetallePost/>}>
         <Route path=':postId' element={<PostInfo/>}></Route>
       </Route>
-      <Route path='Ingresar' element={<Ingresar/>}></Route>
+      <Route path='Ingresar' element={<Ingresar/>}>
+        <Route path='IniciarSesion' element={<IniciarSesion/>}></Route>
+        <Route path='CrearCuenta' element={<CrearCuenta/>}></Route>
+      </Route>
     </Routes>
   </React.StrictMode>
   </BrowserRouter>
