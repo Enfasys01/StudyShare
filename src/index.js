@@ -10,6 +10,8 @@ import PostInfo from './Components/PostInfo';
 import Ingresar from './routes/Ingresar';
 import IniciarSesion from './Components/IniciarSesion';
 import CrearCuenta from './Components/CrearCuenta';
+import Usuario from './routes/Usuario';
+import UsuarioInfo from './Components/UsuarioInfo';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
@@ -24,6 +26,9 @@ root.render(
       <Route path='Ingresar' element={<Ingresar/>}>
         <Route path='IniciarSesion' element={<IniciarSesion/>}></Route>
         <Route path='CrearCuenta' element={<CrearCuenta/>}></Route>
+      </Route>
+      <Route path='Usuario' element={<Usuario/>}>
+        <Route path=':usuarioId' element={<UsuarioInfo/>}></Route>
       </Route>
     </Routes>
   </React.StrictMode>

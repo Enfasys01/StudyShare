@@ -1,4 +1,4 @@
-let datos = [
+let post = [
     {
       id:1,
       titulo:'titulo1',
@@ -31,10 +31,12 @@ let datos = [
     },
   ];
 
+
+
 export function getPosts(){
-    return datos;
+    return post;
 }
 
 export function getPost(id){
-    return datos.find(e=>e.id==id);
+    return post.find(e=>e.id==id);
 }

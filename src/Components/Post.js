@@ -9,10 +9,12 @@ export default function Post(props){
         <div className='contenedor basis-5/6'>
           <ul>
             <li>
-              <div className='text-left flex flex-row'>
-                <ImgPerfil></ImgPerfil>
-                <p className='mt-3 ml-2'>{props.data.usuario}</p>
-              </div>
+              <Link to='/Usuario'>
+                <div className='text-left flex flex-row'>
+                  <ImgPerfil></ImgPerfil>
+                  <p className='mt-3 ml-2'>{props.data.usuario}</p>
+                </div>
+              </Link>
             </li>
             <li>
               <div className='font-bold py-1 text-lg text-left'>
