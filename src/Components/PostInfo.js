@@ -1,4 +1,4 @@
-import './PostInfo.css'
+import './PostInfo.css';
 import { Link, useParams } from "react-router-dom";
 import { getPost } from "../datos";
 import Separador from '../Components/Separador';
@@ -6,11 +6,12 @@ import {BiCommentDetail} from 'react-icons/bi'
 import Comentario from './Comentario';
 import Votos from './Votos';
 import ImgPerfil from './ImgPerfil';
+
 export default function PostInfo(){
     let params=useParams();
     let data = getPost(params.postId);
     return(
-      <div className='lista '>
+      <div className='lista'>
         <div className='contenedor'>
           <div className='flex flex-row mb-2'>
             <Votos data={data}></Votos>
@@ -19,8 +20,12 @@ export default function PostInfo(){
                 <Link to='/'>
                   <li>
                     <div className='text-left flex flex-row'>
+                      <Link to='/Usuario'>
                         <ImgPerfil></ImgPerfil>
+                      </Link>
+                      <Link to='/Usuario'>
                         <p className='mt-3 ml-2'>{data.usuario}</p>
+                      </Link>
                     </div>
                   </li>
                 </Link>
@@ -49,7 +54,7 @@ export default function PostInfo(){
         <div className='contenedor'>
           <div className='flex flex-row'>
             <textarea className='bg-slate-200 px-4 py-2 rounded-3xl basis-5/6 scroll' placeholder='Escribe tu opinión'></textarea>
-            <div className='basis-1/6 rounded-3xl bg-violet-600 ml-3 text-white text-3xl flex hover:bg-violet-800 duration-200 h-26 comment-btn'><BiCommentDetail className=''/></div>
+            <div className='basis-1/6 rounded-3xl bg-violet-600 ml-3 text-white text-3xl flex hover:bg-violet-800 duration-200 h-26 comment-btn'><BiCommentDetail/></div>
           </div>
           <h1 className='my-1 text-lg'>Comentarios</h1>
           {data.comentarios.map(e=>{return(<Comentario data={e}></Comentario>);})}

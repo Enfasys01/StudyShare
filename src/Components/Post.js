@@ -6,15 +6,17 @@ export default function Post(props){
   return(
     <div className='flex flex-row'>
         <Votos data={props.data} cont={true}></Votos>
-        <div className='contenedor basis-5/6'>
+        <div className='contenedor ml-2'>
           <ul>
             <li>
-              <Link to='/Usuario'>
-                <div className='text-left flex flex-row'>
-                  <ImgPerfil></ImgPerfil>
-                  <p className='mt-3 ml-2'>{props.data.usuario}</p>
-                </div>
-              </Link>
+              <div className='text-left flex flex-row'>
+                <Link to='/Usuario'>
+                <ImgPerfil></ImgPerfil>
+                </Link>
+                <Link to='/Usuario'>
+                <p className='mt-3 ml-2'>{props.data.usuario}</p>
+                </Link>
+              </div>
             </li>
             <li>
               <div className='font-bold py-1 text-lg text-left'>
@@ -26,7 +28,6 @@ export default function Post(props){
                 {props.data.materia}
               </div>
               {props.data.etiquetas.map(e=>{return(<div className='bg-violet-600 rounded-lg px-1'>{e}</div>);})}
-                
             </li>
           </ul>
         </div>
