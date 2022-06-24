@@ -13,8 +13,8 @@ export default function Navbar(){
     <>
       <div className="navbar shadow-lg">
         <Link to='#' className="menu-bars navbar-open">
-          <div className="menu-btn">
-            <BiMenu onClick={showSidebar} />
+          <div className="menu-btn" onClick={showSidebar}>
+            <BiMenu  />
           </div>
         </Link>
       </div>
