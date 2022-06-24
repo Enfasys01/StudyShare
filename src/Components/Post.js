@@ -3,6 +3,10 @@ import ImgPerfil from './ImgPerfil';
 import Votos from './Votos';
 
 export default function Post(props){
+  
+  const style={
+    backgroundColor:'red'//props.data.Color
+  }
   return(
     <div className='flex flex-row'>
         <Votos data={props.data} cont={true}></Votos>
@@ -14,20 +18,20 @@ export default function Post(props){
                 <ImgPerfil></ImgPerfil>
                 </Link>
                 <Link to='/Usuario'>
-                <p className='mt-3 ml-2'>{props.data.usuario}</p>
+                <p className='mt-3 ml-2'>{props.data.nombre}</p>
                 </Link>
               </div>
             </li>
             <li>
               <div className='font-bold py-1 text-lg text-left'>
-                <Link to={`/DetallePost/${props.data.id}`}>{props.data.titulo}</Link>
+                <Link to={`/DetallePost/${props.data.ID}`}>{props.data.titulo}</Link>
               </div>
             </li>
             <li className='flex font-normal text-white space-x-1 text-sm'>
-              <div className='bg-red-500 rounded-lg px-1'>
-                {props.data.materia}
+              <div className='bg-red-500 rounded-lg px-1' style={style}>
+                {props.data.Materia}
               </div>
-              {props.data.etiquetas.map(e=>{return(<div className='bg-violet-600 rounded-lg px-1'>{e}</div>);})}
+              {/*props.data.etiquetas.map(e=>{return(<div className='bg-violet-600 rounded-lg px-1'>{e}</div>);*})*/}
             </li>
           </ul>
         </div>

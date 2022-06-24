@@ -7,9 +7,23 @@ import Comentario from './Comentario';
 import Votos from './Votos';
 import ImgPerfil from './ImgPerfil';
 
+import axios from "axios";
+import React from "react";
+
 export default function PostInfo(){
     let params=useParams();
-    let data = getPost(params.postId);
+    const [post, setPost] = React.useState(null);
+    const url = "http://10.152.2.17:3000/TraerPostsMasRecientes";
+
+    React.useEffect(() => {
+      axios.get(url).then(res=>{
+        console.log(res.data)
+        setPost(res.data);
+      });
+    }, []);
+    
+    if(!post){return null;}
+
     return(
       <div className='lista'>
         <div className='contenedor'>
