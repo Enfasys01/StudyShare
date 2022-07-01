@@ -1,21 +1,21 @@
 
 import Post from './Post.js';
 import './PostList.css'
-import { getPosts } from '../datos.js';
 import axios from "axios";
-import React from "react";
+import React,{useEffect,useState} from "react";
+import getUrl from './Url.js';
 //10.152.5.17:3000/
 
 
 export default function PostList(){
-    const [posts, setPost] = React.useState(null);
-    const url = "http://10.152.2.17:3000/TraerPostsMasRecientes";
-
-    React.useEffect(() => {
+    const [posts, setPost] = useState(null);
+    const url = `http://${getUrl()}/TraerPostsMasRecientes`;
+    useEffect(() => {
       axios.get(url).then(res=>{
         console.log(res.data)
         setPost(res.data);
       });
+      // eslint-disable-next-line
     }, []);
     
     if(!posts){return null;}

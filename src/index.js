@@ -12,6 +12,7 @@ import IniciarSesion from './Components/IniciarSesion';
 import CrearCuenta from './Components/CrearCuenta';
 import Usuario from './routes/Usuario';
 import UsuarioInfo from './Components/UsuarioInfo';
+import CrearPost from './routes/CrearPost';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
@@ -30,6 +31,7 @@ root.render(
       <Route path='Usuario' element={<Usuario/>}>
         <Route path=':usuarioId' element={<UsuarioInfo/>}></Route>
       </Route>
+      <Route path='CrearPost' element={<CrearPost/>}></Route>
     </Routes>
   </React.StrictMode>
   </BrowserRouter>

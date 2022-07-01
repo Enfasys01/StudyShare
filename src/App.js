@@ -1,13 +1,13 @@
 import './App.css';
-import LoadBackground from './Components/FetchApi';
+import CrearPostBtn from './Components/CrearPostBtn';
 import './Components/Post.js';
 import PostList from './Components/PostList';
 
 function App() {
   return (
     <div className="App">
-      <LoadBackground/>
       <PostList/>
+      <CrearPostBtn/>
     </div>
   );
 }

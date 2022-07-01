@@ -1,25 +1,25 @@
 import './PostInfo.css';
 import { Link, useParams } from "react-router-dom";
-import { getPost } from "../datos";
 import Separador from '../Components/Separador';
 import {BiCommentDetail} from 'react-icons/bi'
-import Comentario from './Comentario';
+//import Comentario from './Comentario';
 import Votos from './Votos';
 import ImgPerfil from './ImgPerfil';
 
 import axios from "axios";
 import React from "react";
+import getUrl from './Url';
 
 export default function PostInfo(){
     let params=useParams();
     const [post, setPost] = React.useState(null);
-    const url = "http://10.152.2.17:3000/AgarrarPostPorId/"+params.postId;
-
+    const url = `http://${getUrl()}/AgarrarPostPorId/${params.postId}`;
     React.useEffect(() => {
       axios.get(url).then(res=>{
         console.log(res.data)
         setPost(res.data);
       });
+      // eslint-disable-next-line
     }, []);
     
     if(!post){return null;}

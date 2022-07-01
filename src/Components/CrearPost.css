@@ -1,0 +1,34 @@
+input{
+    width: 100%;
+}
+
+.sombrita{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 2px 0px, rgba(14, 30, 37, 0.16) 0px 2px 16px 0px;
+    margin-top: .75rem;
+}
+
+.select>div>div{
+    background-color: rgb(226, 233, 240);
+    border-color: transparent;
+}
+.select>div>div:hover{
+    background-color: rgb(226, 233, 240);
+    border-color: transparent;
+}
+
+select {
+    appearance: none;
+    background-color: transparent;
+    
+    border: none;
+    margin: 0;
+  }
+/*https://react-select.com/home seguir desp*/
+  option:hover{
+    color:white;
+    background-color: black !important;
+  }
+
+.input-text{
+    background-color: blueviolet;
+}
